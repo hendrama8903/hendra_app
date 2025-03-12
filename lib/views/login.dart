@@ -13,11 +13,12 @@ class _LoginViewState extends State<LoginView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Expanded(
-            child: Padding(
+      body: SingleChildScrollView(
+        // Wrap the Column with SingleChildScrollView
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
               padding: const EdgeInsets.fromLTRB(16, 40, 16, 20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -213,27 +214,27 @@ class _LoginViewState extends State<LoginView> {
                 ],
               ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(16, 0, 16, 10),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "Belum punya akun?",
-                  style: TextStyle(fontFamily: "InterRegular"),
-                ),
-                Text(
-                  "Daftar Sekarang",
-                  style: TextStyle(
-                    fontFamily: "InterSemiBold",
-                    color: greenColor,
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 0, 16, 10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Belum punya akun?",
+                    style: TextStyle(fontFamily: "InterRegular"),
                   ),
-                ),
-              ],
+                  Text(
+                    "Daftar Sekarang",
+                    style: TextStyle(
+                      fontFamily: "InterSemiBold",
+                      color: greenColor,
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
